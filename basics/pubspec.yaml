@@ -85,6 +85,15 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  #   - family: Lugrasimo
+  #     fonts:
+  #       - asset: fonts/Lugrasimo-Regular.ttf
+  #       - weight: 400
+  #   - family: Borel
+  #     fonts:
+  #       - asset: fonts/Borel-Regular.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 400
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
