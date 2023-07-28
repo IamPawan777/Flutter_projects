@@ -85,13 +85,13 @@ void main() {
       title: 'FaceBook',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My App',),
+          title: Text('My App Bar',),
           ),
         body: const Material(
           color: Colors.blueGrey,
           child: Center(
             child: Text(
-              'welcome to marvel..',
+              'welcome to marvel',
               textDirection: TextDirection.ltr,
               style: TextStyle(
                 color: Colors.white,
@@ -103,4 +103,5 @@ void main() {
       ),
     ),
   );
+
 }
