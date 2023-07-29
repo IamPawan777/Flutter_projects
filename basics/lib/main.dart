@@ -79,29 +79,29 @@ void main() {
 //     ),
   // );
 
-//....Scaffold.....AppBar.......
-  runApp(
-    MaterialApp(
-      title: 'FaceBook',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('My App Bar',),
-          ),
-        body: const Material(
-          color: Colors.blueGrey,
-          child: Center(
-            child: Text(
-              'welcome to marvel',
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 50,
-              ),
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
+// //....Scaffold.....AppBar.......
+//   runApp(
+//     MaterialApp(
+//       title: 'FaceBook',
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('My App Bar',),
+//           ),
+//         body: const Material(
+//           color: Colors.blueGrey,
+//           child: Center(
+//             child: Text(
+//               'welcome to marvel',
+//               textDirection: TextDirection.ltr,
+//               style: TextStyle(
+//                 color: Colors.white,
+//                 fontSize: 50,
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     ),
+//   );
 
 }
