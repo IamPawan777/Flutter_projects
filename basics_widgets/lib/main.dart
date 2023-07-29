@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../home_screen/newscreen.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'FaceBook App',
     home: MyAppNew(),

@@ -1,4 +1,4 @@
-import 'dart:js';
+// import 'dart:js';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -22,8 +22,8 @@ class MyAppNew extends StatelessWidget {
 //   }
 //   String generateNo() {
 //     var ranNo = Random();
-//     int luc_no = ranNo.nextInt(1000);           //..1000 is boundary
-//     return 'random no- $luc_no';
+//     int lucNo = ranNo.nextInt(1000);           //..1000 is boundary
+//     return 'random no- $lucNo';
 //   }
 // }
 
@@ -94,51 +94,51 @@ class MyAppNew extends StatelessWidget {
 
 
 
-// //.......Image()...AssetImage()....
+// // //.......Image()...AssetImage()....
 
-    return Center(
-      child: Container(
-        margin: EdgeInsets.all(20),
-        color: Colors.amber,
-        child: Row(
-          children: [
-            Expanded(
-              child: Text(
-                "Pawan Bisht",
-                style: TextStyle(
-                  color: Colors.red,
-                  decoration: TextDecoration.none,
-                  fontSize: 50,
-                  fontFamily: 'Raleway',
-                ),
-              ),
-            ),
-            Expanded(
-              // child: Image(
-              //   image: AssetImage('images/6.png'),
-              //   fit: BoxFit.cover,        // fix it accoding to given height & width
-              //   // height: 300,
-              //   // width: 100,
-              // ),
-              child: ImageSet(),                //.......call another class.......
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//     return Center(
+//       child: Container(
+//         margin: EdgeInsets.all(20),
+//         color: Colors.amber,
+//         child: Row(
+//           children: [
+//             Expanded(
+//               child: Text(
+//                 "Pawan Bisht",
+//                 style: TextStyle(
+//                   color: Colors.red,
+//                   decoration: TextDecoration.none,
+//                   fontSize: 50,
+//                   fontFamily: 'Raleway',
+//                 ),
+//               ),
+//             ),
+//             Expanded(
+//               // child: Image(
+//               //   image: AssetImage('images/6.png'),
+//               //   fit: BoxFit.cover,        // fix it accoding to given height & width
+//               //   // height: 300,
+//               //   // width: 100,
+//               // ),
+//               child: ImageSet(),                //.......call another class.......
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
-class ImageSet extends StatelessWidget {
-  const ImageSet({super.key});
+// class ImageSet extends StatelessWidget {
+//   const ImageSet({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    AssetImage asImg = AssetImage('images/8.png');
-    Image img = Image(image: asImg, height: 60,);           //properties can give here
-    return Container(child: img,);                  //can write Expanded(), Center()
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     AssetImage asImg = AssetImage('images/8.png');
+//     Image img = Image(image: asImg, height: 60,);           //properties can give here
+//     return Container(child: img,);                  //can write Expanded(), Center()
+//   }
+// }
 
 
 
@@ -217,7 +217,7 @@ class ImageSet extends StatelessWidget {
 
 
 
-// //...  ListView()....ListTile().....Icon()
+// //...  ListView().and long list.....ListTile().....Icon()
 
 //   return Scaffold(
 //     appBar: AppBar(
@@ -228,50 +228,73 @@ class ImageSet extends StatelessWidget {
 //   }
 // }
 
-// Widget getListView() {
-//   var listView = ListView(                                    //ListView() widget
-//     children: [
+// // Widget getListView() {
+// //   var listView = ListView(                                    //ListView() widget
+// //     children: [
 
-//       ListTile(
-//         leading: Icon(Icons.access_alarm_outlined),
-//         title: Text('alarm'),
-//         subtitle: Text('jdsjkks sdkjdk'),        
-//       ),
+// //       ListTile(
+// //         leading: Icon(Icons.access_alarm_outlined),
+// //         title: Text('alarm'),
+// //         subtitle: Text('jdsjkks sdkjdk'),        
+// //       ),
 
-//       ListTile(
-//         leading: Icon(Icons.laptop),
-//         title: Text('laptop jds'),
-//         trailing: Icon(Icons.wb_sunny),
-//         onTap: () {
-//           //..something..
-//         },
-//       ),
+// //       ListTile(
+// //         leading: Icon(Icons.laptop),
+// //         title: Text('laptop jds'),
+// //         trailing: Icon(Icons.wb_sunny),
+// //         onTap: () {
+// //           //..something..
+// //         },
+// //       ),
 
-//       Text('Harry Joden'),
+// //       Text('Harry Joden'),
       
-//     ],
-//   );
-//   return listView;
-// }
+// //     ],
+// //   );
+// //   return listView;
+// // }
 
 
-// //............or........for long list....and it's memory efficent.....
+// //............or........for long list....and it's memory efficent..but same data...
 
-// List<String> getListElements() {
-//   var items = List<String>.generate(500, (context) => "Item $context");
+// List<String> getListElements() {                //.1.generate list of item..(data source)
+//   var items = List<String>.generate(1000, (context) => "Item $context");
 //   return items;
 // }
 
-// Widget getListView() {
+// Widget getListView() {                        //.2.convert into widget.
 //   var listItems = getListElements();
 
 //   var listView = ListView.builder(
 //     itemBuilder: (context, index) {
       
-//       return ListTile(
+//       return ListTile(                      //.....all actions
 //         title: Text(listItems[index]),
+//         leading: Icon(Icons.home_sharp),
 //       );
 //     }
 //     );
 //   return listView;
 // }
+
+
+
+
+//.....FloatActionButton().........
+
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('FaceBoook'),
+    ),
+    // body: ,
+    floatingActionButton: FloatingActionButton(
+      onPressed: () {                         //anonymous function
+        debugPrint('hid jdj sssss');
+      },
+      child: Icon(Icons.add),
+      tooltip: 'pawan bisht',     //hover 
+    ),
+  );
+
+  }
+}
