@@ -94,6 +94,30 @@ class MyAppNew extends StatelessWidget {
 
 
 
+
+// //................Directionality()......use for text direction.......
+
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text(
+//         'pawan Bisht'
+//       ),
+//     ),
+//     body: Material(
+//       child: Directionality(
+//         textDirection: TextDirection.ltr,       
+//         child: Text(
+//           'Hii I am Pawan Bisht... i am a web developer...'
+//         ),
+//       ),
+//       ), 
+//   );
+//   }
+// }
+
+
+
+
 // // //.......Image()...AssetImage()....
 
 //     return Center(
@@ -247,7 +271,15 @@ class MyAppNew extends StatelessWidget {
 // //         },
 // //       ),
 
+// //       ListTile(
+// //         leading: Image(image: AssetImage('images/1.jpg')),
+// //         title: Text('pawan bisht'),
+// //         textColor: Color.fromARGB(255, 30, 167, 92),
+// //       ),
+
 // //       Text('Harry Joden'),
+
+// //       Image(image: AssetImage('images/1.jpg')),
       
 // //     ],
 // //   );
@@ -280,21 +312,69 @@ class MyAppNew extends StatelessWidget {
 
 
 
-//.....FloatActionButton().........
+// //.....FloatActionButton().........
 
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('FaceBoook'),
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text('FaceBoook'),
+//     ),
+//     // body: ,
+//     floatingActionButton: FloatingActionButton(
+//       onPressed: () {                         //anonymous function
+//         debugPrint('hid jdj sssss');
+//       },
+//       child: Icon(Icons.add),
+//       tooltip: 'pawan bisht',     //hover 
+//     ),
+//   );
+
+//   }
+// }
+
+
+
+//........stack()......positioned()........
+
+  return Material(
+    child: Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'pawan Pawan'
+        ),
+      ),
+      body:  Center(
+        child: Stack(
+          alignment: Alignment.center,
+          // fit: StackFit.expand,
+          // textDirection: TextDirection.rtl,    
+          clipBehavior: Clip.none,                    //....extra part....   
+        children: [
+          Container(                      //....4th.....
+            height: 300,
+            width: 300,
+            color: Colors.red,
+          ),
+          Container(                        //....3rd....
+            height: 200,
+            width: 200,
+            color: Color.fromARGB(255, 54, 244, 95),
+          ),
+          Positioned(                     //...2nd...
+            top: -100,
+            left: 50,
+            child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.amber,            
+            ),            
+          ),
+          Text('Open'),                     //...1st...
+        ],
+      ),
     ),
-    // body: ,
-    floatingActionButton: FloatingActionButton(
-      onPressed: () {                         //anonymous function
-        debugPrint('hid jdj sssss');
-      },
-      child: Icon(Icons.add),
-      tooltip: 'pawan bisht',     //hover 
     ),
+  
   );
-
   }
 }
+
