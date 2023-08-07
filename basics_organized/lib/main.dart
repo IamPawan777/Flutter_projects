@@ -16,7 +16,7 @@ class Demo extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'My appn',
+            'My APPs+',
           ),
         ),
         body: const NewDemo(),                        //call to screen.dart file

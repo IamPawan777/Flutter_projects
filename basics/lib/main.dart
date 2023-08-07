@@ -79,29 +79,52 @@ void main() {
 //     ),
   // );
 
-// //....Scaffold.....AppBar.......
-//   runApp(
-//     MaterialApp(
-//       title: 'FaceBook',
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('My App Bar',),
-//           ),
-//         body: const Material(
-//           color: Colors.blueGrey,
-//           child: Center(
-//             child: Text(
-//               'welcome to marvel',
-//               textDirection: TextDirection.ltr,
-//               style: TextStyle(
-//                 color: Colors.white,
-//                 fontSize: 50,
-//               ),
-//             ),
-//           ),
-//         ),
-//       ),
-//     ),
-//   );
+
+
+//....Scaffold()..AppBar()..FloatingActionButton()..BottomNavigationBar()..BottomNavigationBarItem()..
+//....Icon()..Drawer()..
+
+  runApp(
+    MaterialApp(
+      title: 'FaceBook',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('App Bar',),
+          ),
+        body: const Material(
+          // color: Colors.blueGrey,
+          child: Center(
+            child: Text(
+              'welcome to marvel',
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                color: Color.fromARGB(255, 245, 5, 5),
+                fontSize: 50,
+              ),
+            ),
+          ),
+        ),
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.access_alarm),
+            onPressed: () {},
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(icon: Icon(Icons.account_box), label: 'Box'),
+              BottomNavigationBarItem(icon: Icon(Icons.face), label: 'Face'),
+            ],
+            ),
+            backgroundColor: Colors.yellow,             //external color in chrome and desktop
+            drawer: Drawer(
+              child: Scaffold(
+                appBar: AppBar(
+                title: Text('Pawan Bisht',),
+                ),
+              ),
+            ),
+      ),
+    ),
+  );
 
 }

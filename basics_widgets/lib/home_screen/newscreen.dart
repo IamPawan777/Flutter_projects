@@ -8,7 +8,6 @@ class MyAppNew extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
 // // ......randrom value....
 
 //     return Material(
@@ -26,8 +25,6 @@ class MyAppNew extends StatelessWidget {
 //     return 'random no- $lucNo';
 //   }
 // }
-
-
 
 // //........Container.....padding, margin.....Custom fonts......
 
@@ -54,8 +51,6 @@ class MyAppNew extends StatelessWidget {
 //     );
     // }
 // // }
-
-
 
 // //............row, column.....Expanded.......
 
@@ -92,9 +87,6 @@ class MyAppNew extends StatelessWidget {
 //   }
 // }
 
-
-
-
 // //................Directionality()......use for text direction.......
 
 //   return Scaffold(
@@ -105,18 +97,15 @@ class MyAppNew extends StatelessWidget {
 //     ),
 //     body: Material(
 //       child: Directionality(
-//         textDirection: TextDirection.ltr,       
+//         textDirection: TextDirection.ltr,
 //         child: Text(
 //           'Hii I am Pawan Bisht... i am a web developer...'
 //         ),
 //       ),
-//       ), 
+//       ),
 //   );
 //   }
 // }
-
-
-
 
 // // //.......Image()...AssetImage()....
 
@@ -164,8 +153,6 @@ class MyAppNew extends StatelessWidget {
 //   }
 // }
 
-
-
 // //......ElevatedButton()....AlertDialog().....
 
 //     return Center(
@@ -210,7 +197,7 @@ class MyAppNew extends StatelessWidget {
 //   }
 // }
 
-// class ClickButton extends StatelessWidget {                   //..ElevatedButton()          
+// class ClickButton extends StatelessWidget {                   //..ElevatedButton()
 //   const ClickButton({super.key});
 
 //   @override
@@ -226,7 +213,7 @@ class MyAppNew extends StatelessWidget {
 //     );
 //   }
 
-//   void fun(BuildContext context) {                          //...AlertDialog.....    
+//   void fun(BuildContext context) {                          //...AlertDialog.....
 //     var altDialog = AlertDialog(
 //       title: Text('Wow..! Today is Sunday'),
 //       content: Text(
@@ -241,53 +228,65 @@ class MyAppNew extends StatelessWidget {
 
 
 
-// //...  ListView().and long list.....ListTile().....Icon()
 
-//   return Scaffold(
-//     appBar: AppBar(
-//       title: Text('FaceBook',),
-//     ),
-//     body: getListView(),            //call ListView
+
+//...  ListView().and long list.....ListTile().....Icon()
+
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('FaceBook',),
+    ),
+    // body: getListView(),            //call .........ListView.........
+//// or
+    body: ListView.builder(
+      itemCount: 50,
+      itemBuilder: (BuildContext context, int index){
+        return ListTile(
+          leading: Icon(Icons.person),
+          trailing: Icon(Icons.call),
+          title: Text('Person ${index+1}'),
+        );
+      }
+      ),
+  );
+  }
+}
+
+// Widget getListView() {
+//   var listView = ListView(                                    //ListView() widget
+//     children: [
+
+//       ListTile(
+//         leading: Icon(Icons.access_alarm_outlined),
+//         title: Text('alarm'),
+//         subtitle: Text('jdsjkks sdkjdk'),
+//       ),
+
+//       ListTile(
+//         leading: Icon(Icons.laptop),
+//         title: Text('laptop jds'),
+//         trailing: Icon(Icons.wb_sunny),
+//         onTap: () {
+//           //..something..
+//         },
+//       ),
+
+//       ListTile(
+//         leading: Image(image: AssetImage('images/1.jpg')),
+//         title: Text('pawan bisht'),
+//         textColor: Color.fromARGB(255, 30, 167, 92),
+//       ),
+
+//       Text('Harry Joden'),
+
+//       Image(image: AssetImage('images/1.jpg')),
+
+//     ],
 //   );
-//   }
+//   return listView;
 // }
 
-// // Widget getListView() {
-// //   var listView = ListView(                                    //ListView() widget
-// //     children: [
-
-// //       ListTile(
-// //         leading: Icon(Icons.access_alarm_outlined),
-// //         title: Text('alarm'),
-// //         subtitle: Text('jdsjkks sdkjdk'),        
-// //       ),
-
-// //       ListTile(
-// //         leading: Icon(Icons.laptop),
-// //         title: Text('laptop jds'),
-// //         trailing: Icon(Icons.wb_sunny),
-// //         onTap: () {
-// //           //..something..
-// //         },
-// //       ),
-
-// //       ListTile(
-// //         leading: Image(image: AssetImage('images/1.jpg')),
-// //         title: Text('pawan bisht'),
-// //         textColor: Color.fromARGB(255, 30, 167, 92),
-// //       ),
-
-// //       Text('Harry Joden'),
-
-// //       Image(image: AssetImage('images/1.jpg')),
-      
-// //     ],
-// //   );
-// //   return listView;
-// // }
-
-
-// //............or........for long list....and it's memory efficent..but same data...
+//............or........for long list....and it's memory efficent..but same data...
 
 // List<String> getListElements() {                //.1.generate list of item..(data source)
 //   var items = List<String>.generate(1000, (context) => "Item $context");
@@ -295,11 +294,13 @@ class MyAppNew extends StatelessWidget {
 // }
 
 // Widget getListView() {                        //.2.convert into widget.
+
 //   var listItems = getListElements();
 
 //   var listView = ListView.builder(
+//       // scrollDirection: Axis.horizontal,
 //     itemBuilder: (context, index) {
-      
+
 //       return ListTile(                      //.....all actions
 //         title: Text(listItems[index]),
 //         leading: Icon(Icons.home_sharp),
@@ -308,6 +309,7 @@ class MyAppNew extends StatelessWidget {
 //     );
 //   return listView;
 // }
+
 
 
 
@@ -324,7 +326,7 @@ class MyAppNew extends StatelessWidget {
 //         debugPrint('hid jdj sssss');
 //       },
 //       child: Icon(Icons.add),
-//       tooltip: 'pawan bisht',     //hover 
+//       tooltip: 'pawan bisht',     //hover
 //     ),
 //   );
 
@@ -333,48 +335,119 @@ class MyAppNew extends StatelessWidget {
 
 
 
-//........stack()......positioned()........
 
-  return Material(
-    child: Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'pawan Pawan'
-        ),
-      ),
-      body:  Center(
-        child: Stack(
-          alignment: Alignment.center,
-          // fit: StackFit.expand,
-          // textDirection: TextDirection.rtl,    
-          clipBehavior: Clip.none,                    //....extra part....   
-        children: [
-          Container(                      //....4th.....
-            height: 300,
-            width: 300,
-            color: Colors.red,
-          ),
-          Container(                        //....3rd....
-            height: 200,
-            width: 200,
-            color: Color.fromARGB(255, 54, 244, 95),
-          ),
-          Positioned(                     //...2nd...
-            top: -100,
-            left: 50,
-            child: Container(
-            height: 100,
-            width: 100,
-            color: Colors.amber,            
-            ),            
-          ),
-          Text('Open'),                     //...1st...
-        ],
-      ),
-    ),
-    ),
-  
-  );
-  }
-}
 
+// //........stack()......positioned()........
+
+//   return Material(
+//     child: Scaffold(
+//       appBar: AppBar(
+//         title: Text(
+//           'pawan Pawan'
+//         ),
+//       ),
+//       body:  Center(
+//         child: Stack(
+//           alignment: Alignment.center,
+//           // fit: StackFit.expand,
+//           // textDirection: TextDirection.rtl,
+//           clipBehavior: Clip.none,                    //....extra part....
+//         children: [
+//           Container(                      //....4th.....
+//             height: 300,
+//             width: 300,
+//             color: Colors.red,
+//           ),
+//           Container(                        //....3rd....
+//             height: 200,
+//             width: 200,
+//             color: Color.fromARGB(255, 54, 244, 95),
+//           ),
+//           Positioned(                     //...2nd...
+//             top: -100,
+//             left: 50,
+//             child: Container(
+//             height: 100,
+//             width: 100,
+//             color: Colors.amber,
+//             ),
+//           ),
+//           Text('Open'),                     //...1st...
+//         ],
+//       ),
+//     ),
+//     ),
+
+//   );
+//   }
+// }
+
+
+
+
+
+// //.......Scaffold().....AppBar()...BottomNavigation()...Drawer()...FloatingActionButton()....
+
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Pawan Bisht'),
+//       ),
+
+//       drawer: Drawer(
+//         child: Scaffold(
+//             appBar: AppBar(
+//               title: Text('Choose...'),
+//             ),
+//             body: Material(
+//               child: getListView(),
+//             )),
+//       ),
+
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {},
+//         child: Icon(Icons.accessibility),
+//       ),
+
+
+//       bottomNavigationBar: BottomNavigationBar(
+//         items: [
+//           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+//           BottomNavigationBarItem(icon: Icon(Icons.add_a_photo), label: 'Photo'),
+//           BottomNavigationBarItem(icon: Icon(Icons.image), label: 'Images'),
+//           BottomNavigationBarItem(icon: Icon(Icons.add_road), label: 'Road'),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// Widget getListView() {
+//   var listView = ListView(
+//     //ListView() widget
+//     children: [
+//       ListTile(
+//         //1st item
+//         leading: Icon(Icons.access_alarm_outlined),
+//         title: Text('Land Scape'),
+//         subtitle: Text('jdsjkks sdkjdk'),
+//       ),
+//       ListTile(
+//         //2nd item
+//         leading: Icon(Icons.laptop),
+//         title: Text('laptop jds'),
+//         trailing: Icon(Icons.wb_sunny),
+//         onTap: () {
+//           //..something..
+//         },
+//       ),
+//       ListTile(
+//         //3rd item
+//         leading: Icon(Icons.phone),
+//         title: Text('phone cape'),
+//         subtitle: Text('jdsjkks  sd sd  sd  sd s sd sdsd sdkjdk'),
+//         trailing: Icon(Icons.access_time),
+//       ),
+//     ],
+//   );
+//   return listView;
+// }
