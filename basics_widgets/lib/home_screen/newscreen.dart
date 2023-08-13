@@ -52,7 +52,7 @@ class MyAppNew extends StatelessWidget {
     // }
 // // }
 
-// //............row, column.....Expanded.......
+// //............row, column.....Expanded.....
 
 //     return Scaffold(
 //       appBar: AppBar(
@@ -67,10 +67,10 @@ class MyAppNew extends StatelessWidget {
 //             child: const Column(                    //also use Row() widget
 //               children: [
 //                 Expanded(
-//                   child: Text('pawan Bisht'),
+//                   child: Text('pawan Bisht'),           
 //                 ),
 //                 Expanded(
-//                 child: Text('Vonod khosla',),
+//                   child: Text('Vonod khosla',),
 //                   ),
 //                 Expanded(
 //                   child: Text('krishan kumarsds sd  sd s d sd s ds d  sd  s dsdsd'),
@@ -86,6 +86,156 @@ class MyAppNew extends StatelessWidget {
 //     );
 //   }
 // }
+
+
+// //.................flexible.......
+
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text("Hey friends"),
+//     ),
+//     body: Column(
+//       children: [
+//         Flexible(
+//           flex: 3,
+//           child: Container(
+//           child: Text(" Please subscribe my youtube channal..",
+//           style: TextStyle(fontSize: 30),
+//           ),
+//           padding: EdgeInsets.all(30),
+//           color: Colors.redAccent,
+//           alignment: Alignment.center,
+//           // width: 600,
+//         ),
+//         ),
+//         Flexible(
+//           flex: 2,
+//           fit: FlexFit.loose,
+//           child: Container(
+//           child: Text("youtube channal..",
+//           style: TextStyle(fontSize: 30),
+//           ),
+//           padding: EdgeInsets.all(30),
+//           color: Colors.blueAccent,
+//           alignment: Alignment.center,
+//           height: 100,
+
+//         ),
+//       ),
+//       Flexible(
+//           flex: 1,                  //default value
+//         child: Container(
+//           child: Text(" Please.",
+//           style: TextStyle(fontSize: 30),
+//           ),
+//           padding: EdgeInsets.all(30),
+//           color: Colors.pinkAccent,
+//           alignment: Alignment.centerLeft,
+//           width: 600,
+//         ),
+//       ),
+//       ],
+//     ),
+//   );
+//   }
+// }
+
+
+
+
+// //........Flex().......
+
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text(
+//         'pawan Bisht'
+//       ),
+//     ),
+//     body: Flex(
+//       direction: Axis.vertical,                 //vertically containers
+//       children: [
+//         Container(                                    
+//           child: Text('Pawan Bisht'),
+//           padding: EdgeInsets.all(20),
+//           color: Colors.lightBlueAccent,
+//           alignment: Alignment.center,        //..no height width so cover complete space                   
+//         ),
+//         Container(
+//           child: Text('Pawan Bisht'),
+//           padding: EdgeInsets.all(30),
+//           margin: EdgeInsets.all(10),
+//           color: Colors.redAccent,
+//           height: 300,
+//           width: 250,
+//           alignment: Alignment.center,
+//         ),
+//         Container(
+//           child: Text('Pawan Bisht'),
+//           padding: EdgeInsets.all(30),
+//           color: Colors.brown,
+//         ),
+//       ],
+//     ),
+//   );
+//   }
+// }
+
+
+
+// //......Center...........
+
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text(
+//         'pawan Bisht'
+//       ),
+//     ),
+//     body: Center(
+//       heightFactor: 2,
+//       widthFactor: 2,
+//       child: Container(
+//         height: 150,
+//         width: 100,
+//         color: Color.fromARGB(255, 38, 195, 54),
+//         child: Text(
+//         'Hello World',
+//         textDirection: TextDirection.ltr
+//       ),
+
+//       ),
+//     )
+//   );
+//   }
+// }
+
+
+
+
+//......Center...........
+
+  return Scaffold(
+    appBar: AppBar(
+      title: Text(
+        'pawan Bisht'
+      ),
+    ),
+    body: Align(
+      alignment: Alignment(0.1, -1),
+      heightFactor: 2,
+      widthFactor: 2,
+      child: Container(
+        height: 150,
+        width: 100,
+        color: Color.fromARGB(255, 38, 195, 54),
+      ),
+    )
+  );
+  }
+}
+
+
+
+
 
 // //................Directionality()......use for text direction.......
 
@@ -230,27 +380,27 @@ class MyAppNew extends StatelessWidget {
 
 
 
-//...  ListView().and long list.....ListTile().....Icon()
+//...  ListView().and. ListView.builder(). and .ListView.separator()...ListTile().....Icon()
 
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('FaceBook',),
-    ),
-    // body: getListView(),            //call .........ListView.........
-//// or
-    body: ListView.builder(
-      itemCount: 50,
-      itemBuilder: (BuildContext context, int index){
-        return ListTile(
-          leading: Icon(Icons.person),
-          trailing: Icon(Icons.call),
-          title: Text('Person ${index+1}'),
-        );
-      }
-      ),
-  );
-  }
-}
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text('FaceBook',),
+//     ),
+//     // body: getListView(),            //call .........ListView.........
+// //// or
+//     body: ListView.builder(
+//       itemCount: 50,
+//       itemBuilder: (BuildContext context, int index){
+//         return ListTile(
+//           leading: Icon(Icons.person),
+//           trailing: Icon(Icons.call),
+//           title: Text('Person ${index+1}'),
+//         );
+//       }
+//       ),
+//   );
+//   }
+// }
 
 // Widget getListView() {
 //   var listView = ListView(                                    //ListView() widget
@@ -310,6 +460,61 @@ class MyAppNew extends StatelessWidget {
 //   return listView;
 // }
 
+// //............or........for ListView.Separator()....Card()......
+
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text('DATA'),
+//     ),
+//     body: ListView.separated(
+//       itemCount: 30,
+//       itemBuilder: (BuildContext context, int index){
+//         return Card(
+//           color: Colors.tealAccent,
+//           child: Padding(
+//             child: Text('Pawan $index'),
+//             padding: EdgeInsets.all(50),
+//           ),
+//           );
+//       }, 
+//       separatorBuilder: (BuildContext context, int index){
+//         // return Divider();
+//         return Card(
+//           color: Colors.amber,
+//           child: Padding(
+//             child: Text('Separator $index'),
+//             padding: EdgeInsets.all(2),
+//           ),
+//         );
+//       }, 
+//       ),
+//   );
+//   }
+// }
+
+
+// //............or........for ListView.cunstom()..........
+
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text('DATA'),
+//     ),
+//     body: ListView.custom(
+//       childrenDelegate: SliverChildBuilderDelegate(
+//         (BuildContext context, int index) {
+//           return Card(
+//             color: Colors.blue,
+//            child: Padding(
+//             child: Text('Pawan $index'),
+//             padding: EdgeInsets.all(70),
+//           ),
+//           );
+//       }
+//       ),
+//     ),
+//   );
+//   }
+// }
 
 
 
@@ -381,6 +586,7 @@ class MyAppNew extends StatelessWidget {
 //   );
 //   }
 // }
+
 
 
 
